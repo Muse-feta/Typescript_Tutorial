@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "install",
+      "path": "typescript_config",
+      "group": "clean",
+      "problemMatcher": [],
+      "label": "npm: install - typescript_config",
+      "detail": "install dependencies from package"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "typescript_config",
+      "problemMatcher": [],
+      "label": "npm: start - typescript_config",
+      "detail": "lite-server"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "typescript_revison/tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": "build",
+      "label": "tsc: build - typescript_revison/tsconfig.json"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "typescript_config/tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": "build",
+      "label": "tsc: build - typescript_config/tsconfig.json"
+    }
+  ]
+}
