@@ -47,8 +47,21 @@ type Employee = {
 const employee: Employee = {id: 0, name:"feta"}
 
 
+// interface
+interface Users {
+    readonly dbId:number,
+    email: string,
+    password: number
+}
+
+const user1: Users = {
+    dbId:1,
+    email: "f@email.com",
+    password: 1234
+}
+
 // union types
-const kgtolbs = (kg: number | string)=> {
+const kgtolbs = (kg: number | string) :any=> {
     if(typeof kg === "number")
         return kg * 7
     else return kg
@@ -87,3 +100,11 @@ const num: theNumbers = 200
 type metrics = "cm" | "inch"
 
 const width:metrics = "cm"
+
+// Generics
+
+const identity = <T>(val: T):T => {
+    return val
+};
+
+identity("muse")
